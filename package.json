@@ -1,12 +1,14 @@
 {
-  "name": "nextjs_tailwind_shadcn_ts",
+  "name": "malladihomes-v2-final",
   "version": "0.2.0",
   "private": true,
   "scripts": {
     "dev": "next dev -p 3000",
-    "build": "next build && node copy-assets.js",
-    "start": "NODE_ENV=production bun .next/standalone/server.js 2>&1 | tee server.log",
+    "build": "next build",
+    "start": "next start",
     "lint": "eslint .",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
     "db:push": "prisma db push",
     "db:generate": "prisma generate",
     "db:migrate": "prisma migrate dev",
